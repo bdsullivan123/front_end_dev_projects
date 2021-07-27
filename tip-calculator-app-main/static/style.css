@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Mono', monospace;
+}
+
+body {
+    background-color: rgb(197, 228, 231);
+}
+
+#logo {
+    width: 4%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7%;
+}
+
+#wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 4%;
+    width: 40%;
+    padding: 20px;
+    height: 280px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px 0 rgb(181, 211, 214);
+}
+
+#input_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 12px;
+    margin-left: 5px;
+    width: 47%;
+    padding: 10px;
+    height: 258px;
+    /* border: solid 1px red; */
+    font-weight: 700;
+    color: rgb(1, 124, 131);
+}
+
+.text_input {
+    background-color: rgb(243, 248, 251);
+    border: none;
+    width: 95%;
+    border-radius: 5px;
+    padding-right: 6px;
+    height: 35px;
+    margin-top: 5px;
+    text-align: right;
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+}
+
+#bill {
+    background-image: url(/images/icon-dollar.svg);
+    background-position: 5%;
+    background-repeat: no-repeat;
+}
+
+#numb_of_people {
+    background-image: url(/images/icon-person.svg);
+    background-position: 5%;
+    background-repeat: no-repeat;
+}
+
+.text_input::-webkit-input-placeholder {
+    color: rgb(173, 173, 173);
+}
+
+#output_box {
+    background-color: rgb(0, 71, 75);
+    border-radius: 12px;
+    width: 45%;
+}
+
+.gen_font_size {
+    font-size: small;
+}

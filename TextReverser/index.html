@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Reverser</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: rgb(201, 201, 201);
+        }
+
+        #wrapper {
+            width: 50%;
+            margin: auto;
+            background-color: rgb(104, 104, 104);
+            padding: 1.5%;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            border-radius: 5%;
+            box-shadow: 10px 10px 4px rgb(161, 161, 161);
+        }
+
+        header {
+            font-size: 140%;
+            width: 45%;
+            margin: auto;
+        }
+
+        .rounded-box {
+            border: black solid 3px;
+            background-color: grey;
+            border-radius: .5em;
+            margin: auto;
+            text-align: center;
+            margin-top: 5%;
+            color: rgb(238, 238, 238);
+            box-shadow: 10px 10px 4px rgb(65, 65, 65);
+        }
+
+        .text-boxes {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: 20%;
+            margin: auto;
+            padding: 1%;
+            font-size: 100%;
+        }
+
+        #input-box {
+            margin-top: 3%;
+        }
+
+        #output-box {
+            margin-top: 3%;
+            margin-bottom: 3%;
+        }
+
+        #my-text-area {
+            height: 240px;
+            margin-top: 3%;
+            resize: none;
+            font-size: 85%;
+            border-radius: .4em;
+            padding: 1%;
+        }
+
+        #output-text {
+            height: 240px;
+            margin-top: 2%;
+            margin-bottom: 11%;
+            resize: none;
+            font-size: 85%;
+            border-radius: .4em;
+            padding: 1.5%;
+            text-align: center;
+        }
+
+        .click-me {
+            color: black;
+            width: 55%;
+            margin: auto;
+            margin-top: 3%;
+            border-radius: .4em;
+            font-size: 80%;
+        }
+
+        #character-count {
+            margin-top: 3%;
+            font-size: 75%;
+        }
+
+        #inner-wrapper{
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <h1 class="rounded-box">Text Reverser</h1>
+        </header>
+        <div id="inner-wrapper">
+            <div id="input-box" class="rounded-box text-boxes">
+                <p>Type the text you want reversed into this box!</p>
+                <textarea maxlength="300" id="my-text-area"></textarea>
+                <p id="character-count">300 Characters Remaining</p>
+                <input class="click-me" type="button" value="Reverse" onclick="reverseText();" />
+            </div>
+            <div id="output-box" class="rounded-box text-boxes">
+                <p>Your output will appear here in this box!</p>
+                <textarea id="output-text" readonly></textarea>
+                <input class="click-me" type="button" value="Reset" onclick="resetText();" />
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    const myTextArea = document.getElementById("my-text-area");
+    const remainingCharsText = document.getElementById("character-count");
+    const maxChars = 300;
+
+    function reverseText() {
+        if (myTextArea.value.length < 2) {
+            alert("Input must be greater than 1 character!");
+        } else {
+            var reversed = myTextArea.value.split("").reverse().join("");
+            document.getElementById("output-text").value = reversed;
+        }
+    };
+
+    myTextArea.addEventListener("input", () => {
+        var remaining = maxChars - myTextArea.value.length;
+
+        remainingCharsText.textContent = `${remaining} Characters Remaining`;
+    });
+
+    function resetText() {
+        myTextArea.value = "";
+        document.getElementById("output-text").value = "";
+        remainingCharsText.innerHTML = "300 Characters Remaining";
+    };
+</script>
+
+</html>
