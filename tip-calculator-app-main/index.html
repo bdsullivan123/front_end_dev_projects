@@ -27,18 +27,45 @@
         <input class="text_input" id="bill" placeholder="0" type="text">
       </div>
       <div>
-        <p class="gen_font_size">Select Tip %</p>
-        <!-- buttons -->
+        <p class="gen_font_size down">Select Tip %</p>
+        <div id="buttons">
+          <button id="five_percent" class="butt">5%</button>
+          <button id="ten_percent" class="butt left">10%</button>
+          <button id="fifteen_percent" class="butt left">15%</button>
+          <button id="twentyfive_percent" class="butt">25%</button>
+          <button id="fifty_percent" class="butt left">50%</button>
+          <input class="butt left" id="custom_amount" type="text" placeholder="Custom">
+        </div>
       </div>
       <div>
-        <p class="gen_font_size">Number of People</p>
+        <div id="paragraphs">
+          <p class="gen_font_size down">Number of People</p>
+          <p class="gen_font_size down" id="validation"></p>
+        </div>
         <input class="text_input" id="numb_of_people" placeholder="0" type="text">
       </div>
     </div>
-    <div id="output_box">
 
+    <div id="output_box">
+      <div id="tip_per_person">
+        <div>
+          <p class="text_output">Tip Amount</p>
+          <p class="person_text">/ person</p>
+        </div>
+        <p id="tip_amount">$<span id="tip_value">0.00</span></p>
+      </div>
+      <div id="total_per_person">
+        <div>
+          <p class="text_output">Total</p>
+          <p class="person_text">/ person</p>
+        </div>
+        <p id="total_amount">$<span id="total_value">0.00</span></p>
+      </div>
+      <button id="reset_button">RESET</button>
     </div>
   </div>
 </body>
+
+<script src="/app/app.js"></script>
 
 </html>

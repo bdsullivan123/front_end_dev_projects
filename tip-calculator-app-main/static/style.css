@@ -23,7 +23,7 @@ body {
     margin-top: 4%;
     width: 40%;
     padding: 20px;
-    height: 280px;
+    height: 310px;
     background-color: white;
     border-radius: 20px;
     box-shadow: 0 20px 50px 0 rgb(181, 211, 214);
@@ -63,10 +63,20 @@ body {
     background-repeat: no-repeat;
 }
 
+#bill:focus {
+    outline: none !important;
+    border: 1px solid rgb(89, 167, 156);
+}
+
 #numb_of_people {
     background-image: url(/images/icon-person.svg);
     background-position: 5%;
     background-repeat: no-repeat;
+}
+
+#numb_of_people:focus {
+    outline: none !important;
+    border: 1px solid rgb(89, 167, 156);
 }
 
 .text_input::-webkit-input-placeholder {
@@ -76,9 +86,116 @@ body {
 #output_box {
     background-color: rgb(0, 71, 75);
     border-radius: 12px;
-    width: 45%;
+    width: 40%;
+    padding: 5%;
 }
 
 .gen_font_size {
     font-size: small;
+}
+
+.text_output {
+    font-size: smaller;
+    color: white;
+}
+
+#tip_amount {
+    color: rgb(33, 195, 172);
+    font-size: xx-large;
+    font-weight: bolder;
+    margin-top: -3%;
+}
+
+#tip_per_person {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+
+#total_per_person {
+    margin-top: 13%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.person_text {
+    font-size: .7em;
+    color: rgb(160, 160, 160);
+}
+
+#total_amount {
+    color: rgb(33, 195, 172);
+    font-size: xx-large;
+    font-weight: bolder;
+    margin-top: -3%;
+}
+
+#reset_button {
+    margin-top: 37%;
+    background-color: rgb(13, 104, 109);
+    color: rgb(13, 94, 99);
+    width: 100%;
+    height: 35px;
+    border: none;
+    border-radius: 2px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bolder;
+    font-size: medium;
+    cursor: pointer;
+}
+
+#custom_amount {
+    background-color: rgb(243, 248, 251);
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 20px;
+    color: black;
+    font-weight: bolder;
+}
+
+#custom_amount:focus {
+    outline: none !important;
+    border: 1px solid rgb(89, 167, 156);
+}
+
+#custom_amount::-webkit-input-placeholder {
+    color: rgb(0, 136, 143);
+}
+
+#buttons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.butt {
+    background-color: rgb(0, 71, 76);
+    color: rgb(227, 245, 248);
+    width: 30.4%;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 3%;
+}
+
+.left {
+    margin-left: 2.9%;
+}
+
+.down {
+    margin-top: 10%;
+}
+
+#paragraphs {
+    display: flex;
+    justify-content: space-between;
+}
+
+#validation {
+    margin-right: 3%;
+    color: rgb(231, 97, 97);
 }
