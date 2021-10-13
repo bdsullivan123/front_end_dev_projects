@@ -154,6 +154,11 @@ body {
     font-size: 20px;
     color: black;
     font-weight: bolder;
+    width: 30.4%;
+    height: 35px;
+    border: none;
+    margin-top: 3%;
+    cursor: pointer;
 }
 
 #custom_amount:focus {
@@ -180,6 +185,7 @@ body {
     font-size: 1em;
     font-weight: bold;
     margin-top: 3%;
+    cursor: pointer;
 }
 
 .left {

@@ -29,12 +29,12 @@
       <div>
         <p class="gen_font_size down">Select Tip %</p>
         <div id="buttons">
-          <button id="five_percent" class="butt">5%</button>
-          <button id="ten_percent" class="butt left">10%</button>
-          <button id="fifteen_percent" class="butt left">15%</button>
-          <button id="twentyfive_percent" class="butt">25%</button>
-          <button id="fifty_percent" class="butt left">50%</button>
-          <input class="butt left" id="custom_amount" type="text" placeholder="Custom">
+          <button onclick="calcTip(value)" id=".05" class="butt" value=".05">5%</button>
+          <button onclick="calcTip(value)" id=".10" class="butt left" value=".10">10%</button>
+          <button onclick="calcTip(value)" id=".15" class="butt left" value=".15">15%</button>
+          <button onclick="calcTip(value)" id=".25" class="butt" value=".25">25%</button>
+          <button onclick="calcTip(value)" id=".50" class="butt left" value=".50">50%</button>
+          <input class="left" id="custom_amount" type="text" placeholder="Custom">
         </div>
       </div>
       <div>
@@ -61,7 +61,7 @@
         </div>
         <p id="total_amount">$<span id="total_value">0.00</span></p>
       </div>
-      <button id="reset_button">RESET</button>
+      <button onclick="reset()" id="reset_button">RESET</button>
     </div>
   </div>
 </body>
